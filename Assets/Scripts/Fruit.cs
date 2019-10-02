@@ -29,8 +29,8 @@ public class Fruit : MonoBehaviour
             Vector3 direction = (collision.transform.position - transform.position).normalized;
 
             GameObject slicedFruit = Instantiate(fruitSlicedPrefab, transform.position, Quaternion.LookRotation(direction));
-            Destroy(gameObject);
             Destroy(slicedFruit, 3f);
+            Destroy(gameObject);
         }
     }
 }
